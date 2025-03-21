@@ -3,6 +3,7 @@ package com.becfernandezp.best_travel.api.models.responses;
 import com.becfernandezp.best_travel.domain.entities.CustomerEntity;
 import com.becfernandezp.best_travel.domain.entities.FlyEntity;
 import com.becfernandezp.best_travel.domain.entities.TourEntity;
+import com.fasterxml.jackson.annotation.JsonFormat;
 import jakarta.persistence.Id;
 import jakarta.persistence.JoinColumn;
 import jakarta.persistence.ManyToOne;
@@ -24,8 +25,14 @@ import java.util.UUID;
 public class TicketResponse implements Serializable {
 
     private UUID id;
+
+    @JsonFormat(shape = JsonFormat.Shape.STRING , pattern = "yyyy-MM-dd HH:mm")
     private LocalDateTime departureDate;
+
+    @JsonFormat(shape = JsonFormat.Shape.STRING , pattern = "yyyy-MM-dd HH:mm")
     private LocalDateTime arrivalDate;
+
+    @JsonFormat(shape = JsonFormat.Shape.STRING , pattern = "yyyy-MM-dd")
     private LocalDate purchaseDate;
     private BigDecimal price;
     private FlyResponse fly;
