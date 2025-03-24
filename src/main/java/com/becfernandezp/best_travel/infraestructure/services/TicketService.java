@@ -83,7 +83,7 @@ public class TicketService implements ITicketService {
     @Override
     public BigDecimal findPrice(Long flyId) {
         var fly = this.flyRepository.findById(flyId).orElseThrow();
-        return fly.getPrice().multiply(charger_price_percentage);
+        return  fly.getPrice().add(fly.getPrice().multiply(charger_price_percentage));
 
     }
 
