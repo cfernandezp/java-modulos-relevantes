@@ -38,7 +38,7 @@ public class ReservationEntity implements Serializable {
     @JoinColumn( name="tour_id",nullable = true)
     private TourEntity tour;
 
-    @ManyToOne (fetch = FetchType.LAZY)
+    @ManyToOne (fetch = FetchType.LAZY)git
     @JoinColumn( name="customer_id")
     private CustomerEntity customer;
 
