@@ -13,6 +13,6 @@ import java.io.Serializable;
 @Builder
 public class TourHotelRequest implements Serializable {
     public Long id;
-
+    private Integer totalDays;
 
 }

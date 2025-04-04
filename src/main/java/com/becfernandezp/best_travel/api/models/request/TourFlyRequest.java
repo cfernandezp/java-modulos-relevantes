@@ -13,5 +13,4 @@ import java.io.Serializable;
 @Builder
 public class TourFlyRequest implements Serializable {
     public Long id;
-    private Integer totalDays;
 }
